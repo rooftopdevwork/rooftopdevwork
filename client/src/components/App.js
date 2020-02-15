@@ -1,12 +1,12 @@
 import React from 'react';
 import { Home } from './Pages/Home';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+import '../styles/global.scss';
 const App = () => {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -18,7 +18,7 @@ const App = () => {
               <Link to="/users">Users</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
