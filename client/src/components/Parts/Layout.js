@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Layout = () => {
-  return <div>{children};</div>;
+export const Layout = ({ children }) => {
+  return <div>{children}</div>;
 };
