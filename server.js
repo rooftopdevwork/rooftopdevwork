@@ -4,8 +4,7 @@ const path = require('path');
 const port = process.env.EXPRESS_PORT || 4000;
 
 const MongoClient = require('mongodb').MongoClient
-const mongoUrl = 'mongodb://localhost:27017'
-const dbName = 'evacuate'
+const mongoUrl = process.env.MONGODB_URI
 
 let db;
 
@@ -28,7 +27,7 @@ app.get('/use', (req, res) => {
 MongoClient.connect(mongoUrl, (err, client) => {
   if (err) return console.log(err);
 
-  db = client.db(dbName)
+  db = client.db()
 
   app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 });
