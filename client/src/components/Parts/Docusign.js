@@ -25,7 +25,7 @@ class Docusign extends React.Component {
   render() {
     return (
       <button className="docusignwrapper" onClick={this.handleClick}>
-        Click Here To Safeguard Your Possession
+        Safeguard Your Possessions
       </button>
     );
   }

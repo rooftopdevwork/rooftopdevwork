@@ -19,7 +19,8 @@ export const Home = () => {
         </Navbar>
         <iframe
           className="iframe"
-          src="https://fervent-brahmagupta-e3b96a.netlify.com"
+          /* src="https://fervent-brahmagupta-e3b96a.netlify.com" */
+          src="http://localhost:4200"
           frameBorder="0"
         ></iframe>
       </Layout>
