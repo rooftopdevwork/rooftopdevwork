@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { Navbar } from '../Parts/Navbar';
 import { Layout } from '../Parts/Layout';
 import { Register } from '../Parts/Register';
-
+import { Docusign } from '../Parts/Docusign';
 // import { Hello } from '../Parts/Hello.tsx';
 import './home.scss';
 export const Home = () => {
@@ -12,6 +12,7 @@ export const Home = () => {
       <Layout>
         <Navbar>
           <Register />
+          <Docusign />
         </Navbar>
         <iframe className="iframe" src="https://fervent-brahmagupta-e3b96a.netlify.com" frameBorder="0"></iframe>
       </Layout>
