@@ -6,11 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "begin": "run-p dev:*",
-    "build": "cd client && npm install && npm run build",
     "dev:start": "cd client && yarn start",
     "dev:serve": "npm run start:runServer",
     "start:runServer": "nodemon server.js",
-    "build:only": "cd client && npm run build"
+    "build:only": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": "git+https://github.com/mariomui/delinkedinman.git",
   "keywords": [],
