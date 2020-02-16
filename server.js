@@ -20,8 +20,12 @@ app.get('/threats', async (req, res) => {
   res.send({ threats });
 })
 
-app.get('/use', (req, res) => {
-  res.send('great');
+app.get('/evacuations', async (req, res) => {
+  const collection = db.collection('evacuations')
+
+  const evacuations = await collection.find().toArray()
+
+  res.send({ evacuations });
 })
 
 MongoClient.connect(mongoUrl, (err, client) => {
