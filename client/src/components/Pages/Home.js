@@ -13,7 +13,7 @@ export const Home = () => {
         <Navbar>
           <Register />
         </Navbar>
-        <iframe className="iframe" src="http://localhost:4200"></iframe>
+        <iframe className="iframe" src="https://fervent-brahmagupta-e3b96a.netlify.com/home"></iframe>
       </Layout>
     </div>
   );
