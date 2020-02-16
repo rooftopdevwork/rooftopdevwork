@@ -20,7 +20,7 @@ export const Home = () => {
         <iframe
           className="iframe"
           /* src="https://fervent-brahmagupta-e3b96a.netlify.com" */
-          src="http://localhost:4200"
+          src="https://fervent-brahmagupta-e3b96a.netlify.com"
           frameBorder="0"
         ></iframe>
       </Layout>
