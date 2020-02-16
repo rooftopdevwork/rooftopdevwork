@@ -9,12 +9,19 @@ import './home.scss';
 export const Home = () => {
   return (
     <div className="homedir">
+      <div className="docusignwrapper">
+        <Docusign />
+      </div>
+
       <Layout>
         <Navbar>
           <Register />
-          <Docusign />
         </Navbar>
-        <iframe className="iframe" src="https://fervent-brahmagupta-e3b96a.netlify.com" frameBorder="0"></iframe>
+        <iframe
+          className="iframe"
+          src="https://fervent-brahmagupta-e3b96a.netlify.com"
+          frameBorder="0"
+        ></iframe>
       </Layout>
     </div>
   );
