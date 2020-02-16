@@ -24,9 +24,10 @@
   },
   "homepage": "https://github.com/mariomui/delinkedinman#readme",
   "dependencies": {
-    "mongodb": "^3.5.3",
+    "amadeus": "^3.3.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.5.3"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

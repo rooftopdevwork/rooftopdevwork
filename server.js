@@ -3,12 +3,18 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 4000;
 
+const Amadeus = require('amadeus');
 const MongoClient = require('mongodb').MongoClient
 const mongoUrl = process.env.MONGODB_URI
 
 let db;
 
 const app = express();
+
+const amadeus = new Amadeus({
+  clientId: process.env.AMADEUS_API_KEY,
+  clientSecret: process.env.AMADEUS_API_SECRET
+});
 
 app.use(express.static(path.resolve(__dirname, './client/public')))
 
@@ -21,11 +27,18 @@ app.get('/threats', async (req, res) => {
 })
 
 app.get('/evacuations', async (req, res) => {
-  const collection = db.collection('evacuations')
+  const results = await amadeus.shopping.flightOffersSearch.get({
+    originLocationCode: 'SFO',
+    destinationLocationCode: 'PDX',
+    departureDate: '2020-02-16',
+    adults: '2'
+  })
 
-  const evacuations = await collection.find().toArray()
+  // const collection = db.collection('evacuations')
 
-  res.send({ evacuations });
+  // const evacuations = await collection.find().toArray()
+
+  res.send({ evacuations: results });
 })
 
 MongoClient.connect(mongoUrl, (err, client) => {
