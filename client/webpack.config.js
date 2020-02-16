@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: '../'
+  path: '../.env'
 });
 const path = require('path');
 const webpack = require('webpack');
@@ -52,7 +52,10 @@ module.exports = proc => {
         }
       ]
     },
-    plugins: [new webpack.ProgressPlugin()],
+    plugins: [
+      new webpack.ProgressPlugin(),
+      new webpack.EnvironmentPlugin(['OAUTH_CLIENT_ID', 'GOOGLE_API_KEY']),
+    ],
     // optimization: {
     // 	splitChunks: {
     // 		cacheGroups: {

@@ -34,14 +34,22 @@ app.get('/evacuations', async (req, res) => {
     adults: '2'
   })
 
+  const body = results.body
+
+  const data = JSON.parse(body)
+
   // const collection = db.collection('evacuations')
 
   // const evacuations = await collection.find().toArray()
 
-  res.send({ evacuations: results });
+  res.send({ evacuations: data });
 })
 
-MongoClient.connect(mongoUrl, (err, client) => {
+app.get('/privacy', async (req, res) => {
+  res.send('Privacy policy - we will not sell your data. It is hosted on Heroku, which is owned by Salesforce. See source code at https://github.com/rooftopdevwork/rooftopdevwork')
+})
+
+MongoClient.connect(mongoUrl, { useUnifiedTopology: true }, (err, client) => {
   if (err) return console.log(err);
 
   db = client.db()
