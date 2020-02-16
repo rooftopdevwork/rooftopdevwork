@@ -23,6 +23,11 @@ module.exports = proc => {
     module: {
       rules: [
         {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/
+        },
+        {
           test: /\.js$/,
           // include: [
           // path.resolve(__dirname, '/client/src')],
