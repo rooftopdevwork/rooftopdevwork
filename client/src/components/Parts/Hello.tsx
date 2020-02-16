@@ -5,4 +5,4 @@ export interface HelloProps {
   framework: string;
 }
 
-export const Hello = () => <h1>Hello from!</h1>;
+export const Hello = () => <h1>Evacuate</h1>;
