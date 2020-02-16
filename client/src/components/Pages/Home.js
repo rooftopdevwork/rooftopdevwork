@@ -5,13 +5,15 @@ import { Layout } from '../Parts/Layout';
 import { Register } from '../Parts/Register';
 
 import { Hello } from '../Parts/Hello.tsx';
+import './home.scss';
 export const Home = () => {
   return (
-    <div>
+    <div className="homedir">
       <Layout>
         <Navbar />
         <Hello />
         <Register />
+        <iframe className="iframe" src="http://localhost:4200"></iframe>
       </Layout>
     </div>
   );
