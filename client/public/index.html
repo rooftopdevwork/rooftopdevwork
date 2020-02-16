@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <script src="https://apis.google.com/js/api.js"></script>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <script>
+      function resizeIframe(obj) {
+        obj.style.height =
+          obj.contentWindow.document.documentElement.scrollHeight + 'px';
+      }
+    </script>
   </head>
 
   <body>
