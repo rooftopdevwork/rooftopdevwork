@@ -25,7 +25,7 @@
   "homepage": "https://github.com/mariomui/delinkedinman#readme",
   "dependencies": {
     "amadeus": "^3.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "docusign-esign": "^5.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
